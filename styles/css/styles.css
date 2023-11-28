@@ -1,0 +1,185 @@
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
+:root {
+  --font-family: "Poppins", Arial, sans-serif;
+  --medium-text: 500;
+  --semi-text: 600;
+  --bold-text: 700;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--red);
+  background-image: url("/images/bg-intro-mobile.png");
+  background-size: cover;
+}
+@media (min-width: 56.25rem) {
+  body {
+    background-image: url("/images/bg-intro-desktop.png");
+  }
+}
+
+.main {
+  padding: 6.25rem 1.5rem;
+}
+@media (min-width: 56.25rem) {
+  .main {
+    max-width: 69.375rem;
+    margin-inline: auto;
+  }
+}
+@media (min-width: 90rem) {
+  .main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.main .header {
+  text-align: center;
+  margin-bottom: 4.375rem;
+}
+@media (min-width: 90rem) {
+  .main .header {
+    max-width: 31rem;
+    text-align: left;
+  }
+}
+.main .header__title {
+  font-family: var(--font-family);
+  font-weight: var(--semi-text);
+  line-height: 1.2;
+  color: white;
+}
+@media (min-width: 56.25rem) {
+  .main .header__title {
+    font-size: 3.125rem;
+  }
+}
+.main .header__subtitle {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  color: white;
+}
+@media (min-width: 90rem) {
+  .main .cta {
+    width: 33.875rem;
+  }
+}
+.main .cta__title {
+  padding: 1.25rem;
+  margin-bottom: 1.5625rem;
+  border-radius: 0.625rem;
+  box-shadow: 0 8px rgba(0, 0, 0, 0.2);
+  font-family: var(--font-family);
+  font-weight: normal;
+  font-size: 1.125rem;
+  text-align: center;
+  background-color: var(--blue);
+  color: white;
+}
+@media (min-width: 56.25rem) {
+  .main .cta__title {
+    font-size: 0.9375rem;
+  }
+}
+.main .cta__form {
+  box-sizing: border-box;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 0.625rem;
+}
+@media (min-width: 90rem) {
+  .main .cta__form {
+    padding: 2.625rem;
+  }
+}
+.main .cta__form input[type=text],
+.main .cta__form input[type=email],
+.main .cta__form input[type=password],
+.main .cta__form input[type=submit] {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: solid 1px lightgray;
+  border-radius: 0.3125rem;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: var(--medium-text);
+  color: var(--dark-blue);
+}
+.main .cta__form input[type=text]:focus,
+.main .cta__form input[type=email]:focus,
+.main .cta__form input[type=password]:focus {
+  outline: 0;
+  border: solid 1px var(--blue);
+}
+.main .cta__form input[type=text].error,
+.main .cta__form input[type=email].error,
+.main .cta__form input[type=password].error,
+.main .cta__form .error {
+  background-image: url("/images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-position: 98% center;
+  border-width: 2px;
+  border-color: var(--red);
+}
+.main .cta__form input[type=text].error::placeholder,
+.main .cta__form input[type=email].error::placeholder,
+.main .cta__form input[type=password].error::placeholder {
+  color: var(--red);
+}
+.main .cta__form .error-msg {
+  display: none;
+  font-family: var(--font-family);
+  font-size: 0.75rem;
+  font-style: italic;
+  text-align: right;
+  color: var(--red);
+  margin-top: -0.625rem;
+  margin-bottom: 1rem;
+}
+.main .cta__form input[type=submit] {
+  border-color: #49AE84;
+  background-color: var(--green);
+  font-weight: var(--semi-text);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  padding: 1rem;
+  border-bottom: solid 5px #49AE84;
+  cursor: pointer;
+}
+.main .cta__legal {
+  padding: 0 1.5rem;
+  font-family: var(--font-family);
+  font-size: 0.75rem;
+  text-align: center;
+  color: var(--grayish-blue);
+}
+.main .cta__legal strong {
+  color: var(--red);
+}
+
+.attribution {
+  font-family: var(--font-family);
+  color: var(--dark-blue);
+}
+.attribution a {
+  text-decoration: none;
+  color: white;
+}
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=styles.css.map */

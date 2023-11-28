@@ -1,0 +1,16 @@
+@use "sass:map";
+@use "functions" as func;
+
+$breakpoints: (
+    "small": func.rem(700),
+    "medium": func.rem(900),
+    "large": func.rem(1440)
+);
+
+
+// breakpoints mixin
+@mixin breakpoints-up($size) {
+    @media (min-width: map-get($breakpoints, $size)) {
+        @content;
+    }
+}
